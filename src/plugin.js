@@ -31,6 +31,7 @@ const onPlayerTimeUpdate = function() {
     } else {
       this.trigger('loadstart');
       this.currentTime(0);
+      this.on('timeupdate', onPlayerTimeUpdate);
     }
   }
 };
